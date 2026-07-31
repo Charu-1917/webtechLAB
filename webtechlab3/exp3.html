@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 03 - Styled Web Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0;
+            background-color: #fff;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #8a2be2;
+            color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .header img.profile {
+            width: 65px;
+            height: 65px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            flex-grow: 1;
+            text-align: center;
+            font-family: "Times New Roman", serif;
+        }
+        .social-icons {
+            display: flex;
+            gap: 8px;
+        }
+        .social-icons span {
+            background-color: #ffffff;
+            color: #8a2be2;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* Navigation Links */
+        .nav-bar {
+            background-color: #add8e6;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+        }
+        .nav-bar a:link {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .nav-bar a:visited {
+            color: #4b0082;
+        }
+        .nav-bar a:hover {
+            color: #ffffff;
+            background-color: #8a2be2;
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+        .nav-bar a:active {
+            color: red;
+        }
+
+        /* Hero / Banner Section */
+        .hero {
+            background-color: #008080;
+            color: #ffffff;
+            padding: 30px 40px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .hero-text {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border: 1px dashed #ffffff;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .hero-image {
+            width: 250px;
+            text-align: center;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Tech Cards Row (4 Columns) */
+        .tech-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 40px;
+            background-color: #e0e0e0;
+            gap: 20px;
+        }
+        .tech-card {
+            flex: 1;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 10px;
+            border-radius: 6px;
+        }
+        .tech-card.html { background-color: #1a365d; }
+        .tech-card.css { background-color: #0d6efd; }
+        .tech-card.js { background-color: #0284c7; }
+        .tech-card.php { background-color: #4c1d95; }
+        .tech-card h2 { margin: 0; font-size: 26px; }
+        .tech-card h3 { margin: 12px 0 0 0; font-size: 16px; }
+
+        /* Profile Cards Row (3 Columns) */
+        .profiles-row {
+            background-color: #005f73;
+            color: #ffffff;
+            display: flex;
+            padding: 30px 40px;
+            gap: 30px;
+        }
+        .profile-card {
+            flex: 1;
+            text-align: center;
+        }
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            object-fit: cover;
+        }
+        .profile-card h4 {
+            color: #90e0ef;
+            margin: 15px 0 8px 0;
+            font-size: 16px;
+        }
+        .profile-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #fbe4d8;
+            padding: 15px 40px;
+            font-size: 13px;
+            color: #333;
+        }
+        .footer p {
+            margin: 4px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="header">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Profile" class="profile">
+            <h1>Ms. Mariah Caraiban</h1>
+            <div class="social-icons">
+                <span>f</span>
+                <span>t</span>
+                <span>in</span>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <a href="#personal">Personal</a>
+            <a href="#academic">Academic</a>
+            <a href="#activity">Activity</a>
+            <a href="#others">Others</a>
+        </div>
+
+        <!-- Banner / Hero Section -->
+        <div class="hero">
+            <div class="hero-text">
+                Welcome to my personal web portfolio. Pursuing Computer Science and Engineering, passionate about web development, user experience design, and modern web technologies.
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400" alt="Illustration">
+            </div>
+        </div>
+
+        <!-- Tech Cards (4-Column Grid) -->
+        <div class="tech-row">
+            <div class="tech-card html">
+                <h2>HTML5</h2>
+                <h3>HTML5</h3>
+            </div>
+            <div class="tech-card css">
+                <h2>CSS3</h2>
+                <h3>CSS3</h3>
+            </div>
+            <div class="tech-card js">
+                <h2>JS</h2>
+                <h3>Javascript</h3>
+            </div>
+            <div class="tech-card php">
+                <h2>PHP</h2>
+                <h3>PHP</h3>
+            </div>
+        </div>
+
+        <!-- Personal Cards (3-Column Grid) -->
+        <div class="profiles-row">
+            <div class="profile-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="Father">
+                <h4>MR. JOSEPH CARAIBAN</h4>
+                <p>It was my father who taught me to value myself. He told me that I was uncommonly beautiful and that I was the most precious thing in his life.</p>
+            </div>
+            <div class="profile-card">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="Mother">
+                <h4>MRS. GRACE CARAIBAN</h4>
+                <p>My mother taught me that we all have the power to achieve our dreams through dedication and hard work.</p>
+            </div>
+            <div class="profile-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="Sibling">
+                <h4>DANIEL CARAIBAN</h4>
+                <p>A brother is both your greatest supporter and lifelong friend who always guides you in times of need.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Karunya Institute of Technology and Sciences, Karunya Nagar, Coimbatore, Tamil Nadu 641114</strong></p>
+            <p>&copy; 2020-2021. URK24CS1162 - Web Technology Lab Batch 3. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
