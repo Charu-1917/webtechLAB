@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coin Flip</title>
+</head>
+<body>
+    <h1>Heads or Tails?</h1>
+
+    <div>
+        <img src="Head.png" id="coin" width="150px" height="150px" /><br />
+        <button id="flip">Flip!</button>
+    </div>
+
+    <p>
+        Heads Total: <span id="num_heads">0</span><br />
+        Tails Total: <span id="num_tails">0</span>
+    </p>
+
+    <script>
+        var headsCount = 0;
+        var tailsCount = 0;
+
+        document.getElementById("flip").addEventListener("click", flipFunction);
+
+        function flipFunction() {
+            var randomFlip = Math.floor(Math.random() * 2);
+            
+            if (randomFlip === 0) {
+                document.getElementById("coin").src = "Heads.png";
+                headsCount++;
+                document.getElementById("num_heads").innerHTML = headsCount;
+            } else {
+                document.getElementById("coin").src = "tails.jpg";
+                tailsCount++;
+                document.getElementById("num_tails").innerHTML = tailsCount;
+            }
+        }
+    </script>
+</body>
+</html>
