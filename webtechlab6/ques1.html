@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+</head>
+<body>
+    <h1>Digital Clock!</h1>
+    <span id="time" style="font-size: 24px; font-weight: bold;"></span>
+
+    <script>
+        function display() {
+            var d = new Date();
+            var hours = d.getHours();
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+
+            // Add leading zeros if numbers are less than 10
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            document.getElementById("time").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+
+        // Call display once immediately, then repeat every 1000ms (1 second)
+        display();
+        setInterval(display, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Records</title>
+</head>
+<body>
+    <h1>Student Records</h1>
+    <div id="output"></div>
+
+    <script>
+        var students = [
+            { name: 'John', r_num: 'UR13CS1129', dob: '20-apr-1995' },
+            { name: 'Joseph', r_num: 'UR15CS1456', dob: '05-jan-2002' },
+            { name: 'Mary', r_num: 'UR14CS7189', dob: '12-aug-1999' },
+            { name: 'David', r_num: 'UR16CS1101', dob: '30-nov-2004' }
+        ];
+
+        var content = "";
+
+        for (var i = 0; i < students.length; i++) {
+            // Print basic details
+            content += "<p>" + students[i].name + "'s Register Number is " + students[i].r_num + "</p>";
+
+            // Extract year of birth from dob string (format: DD-MMM-YYYY)
+            var year = parseInt(students[i].dob.split("-")[2]);
+
+            // Categorize by birth year
+            if (year < 2000) {
+                content += "<p><em>Category: Born before 2000 (" + year + ")</em></p>";
+            } else {
+                content += "<p><em>Category: Born in or after 2000 (" + year + ")</em></p>";
+            }
+            content += "<hr>";
+        }
+
+        document.getElementById("output").innerHTML = content;
+    </script>
+</body>
+</html>
